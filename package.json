@@ -1,0 +1,12 @@
+{
+  "name": "merryphoto",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "sql.js": "^1.12.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

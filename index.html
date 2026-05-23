@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="上传一张原始人像照片，使用内置婚纱照提示词生成新的 AI 婚纱照。"
+    />
+    <title>Wedding Photo - AI 婚纱照生成</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#/">
+        <span class="brand-mark">WP</span>
+        <span class="brand-name">Wedding Photo</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="#/" data-nav="home">首页</a>
+        <a href="#/works" data-nav="works">作品</a>
+        <a href="#/my-generations" data-nav="my">我的任务</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-text" id="settings-button" type="button">设置</button>
+        <button class="lang-toggle" id="language-button" type="button">English</button>
+      </div>
+    </header>
+
+    <main id="app"></main>
+
+    <footer class="site-footer">
+      <span>&copy; 2026 Wedding Photo. All rights reserved.</span>
+      <span data-i18n="footer_note"></span>
+    </footer>
+
+    <div class="modal-backdrop hidden" id="settings-modal" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+      <section class="settings-panel">
+        <header class="settings-head">
+          <div>
+            <p class="eyebrow" data-i18n="settings_kicker">BYOK 设置</p>
+            <h2 id="settings-title" data-i18n="settings_title">连接你的图片生成服务</h2>
+          </div>
+          <button class="close-button" id="close-settings" type="button" aria-label="Close">×</button>
+        </header>
+        <div class="settings-body">
+          <label class="field">
+            <span data-i18n="api_key_label">API Key</span>
+            <input id="api-key-input" type="password" autocomplete="off" placeholder="sk-..." />
+          </label>
+          <label class="field">
+            <span data-i18n="api_url_label">Base URL</span>
+            <input id="api-url-input" type="url" placeholder="https://api.moleapi.com/v1" />
+          </label>
+          <label class="field">
+            <span data-i18n="model_label">默认图片模型</span>
+            <input id="model-input" type="text" placeholder="gpt-image-2" />
+          </label>
+          <p class="help-text" data-i18n="settings_help">
+            API Key 默认只保存在你的浏览器。Base URL 默认为 https://api.moleapi.com/v1。
+          </p>
+          <div class="settings-actions">
+            <button class="primary-button" id="save-settings" type="button" data-i18n="save_settings">保存设置</button>
+            <button class="secondary-button" id="test-settings" type="button" data-i18n="test_settings">测试连接</button>
+            <button class="plain-button" id="clear-settings" type="button" data-i18n="clear_settings">清除</button>
+          </div>
+          <p class="status-line" id="settings-status" role="status"></p>
+        </div>
+      </section>
+    </div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

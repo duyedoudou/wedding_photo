@@ -1,0 +1,8 @@
+[build]
+  command = ""
+  publish = "."
+
+[[redirects]]
+  from = "/generated/*"
+  to = "/generated/:splat"
+  status = 200

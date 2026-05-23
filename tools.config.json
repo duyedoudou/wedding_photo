@@ -1,0 +1,23 @@
+{
+  "tools": [
+    {
+      "slug": "wedding-photo",
+      "title": {
+        "zh": "AI 婚纱照生成",
+        "en": "AI Wedding Photo Generator"
+      },
+      "description": {
+        "zh": "上传一张清晰的人像原片，生成自然、精致、有摄影棚质感的婚纱照。可补充想要的礼服、场景、风格或氛围。",
+        "en": "Upload a clear portrait and generate a natural, polished wedding portrait with studio-quality styling."
+      },
+      "defaultModel": "gpt-image-2",
+      "enabled": true,
+      "requiresImage": true,
+      "exampleImage": "/assets/wedding-preview.png",
+      "sampleImages": [
+        "/assets/wedding-preview.png"
+      ],
+      "promptTemplate": "请基于上传照片生成一张中国长辈双人正式纪念合影。\n\n保持人物的真实身份特征、年龄气质、面部细节、肤色、白发和自然神态。整体感觉要真实、克制、郑重，像纪录片摄影师拍下的普通家庭重要合影。\n\n两位人物直视镜头，姿态端正，表情自然，微笑轻微。动作含蓄、稳重，不刻意摆拍，呈现多年相伴的默契和人生感。\n\n服装按用户补充要求生成；如果没有指定，男士穿老式正式西服，女士穿朴素端庄的正式礼服或简洁白色礼服。\n\n地点按用户补充要求生成；如果用户指定天安门、长城、西湖、上海外滩或老家院子等地点，请让背景自然融入画面，像一次认真留下的纪念照片。\n\n摄影风格：纪录片摄影，中国老胶片质感，自然光线，真实肤色，轻微胶片颗粒，柔和高光，稳重构图，略带年代感的色调。\n\n如果用户补充了一句话，把它作为情绪参考，不要直接把文字写进画面，除非用户明确要求。\n\n{{userPrompt}}"
+    }
+  ]
+}
