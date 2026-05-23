@@ -69,13 +69,16 @@ a {
 }
 
 .brand-mark {
-  display: grid;
   width: 38px;
   height: 38px;
-  place-items: center;
-  color: #fff;
-  background: var(--ink);
   border-radius: 8px;
+}
+
+.brand-logo {
+  display: block;
+  object-fit: cover;
+  background: #fff;
+  border: 1px solid var(--line);
 }
 
 .brand-name {

@@ -44,6 +44,9 @@ npm start
 - `db.js`：SQLite 初始化和数据读写。
 - `schema.sql`：数据库表结构。
 - `tools.config.json`：婚纱照工具配置和默认提示词。
+- `assets/brand-icon.png`：站点主品牌图标。
+- `assets/favicon.png`：浏览器标题栏图标。
+- `assets/apple-touch-icon.png`：移动端添加到主屏幕图标。
 - `assets/wedding-preview.png`：首页和工具页示例图。
 - `data/hairstyle.sqlite`：本地数据库，文件名保留历史兼容。
 - `data/public/*.png`：生成后保存的图片。
